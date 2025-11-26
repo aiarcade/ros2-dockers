@@ -1,0 +1,9 @@
+source;share/simplebot/hook/pythonpath.ps1
+source;share/simplebot/hook/pythonpath.dsv
+source;share/simplebot/hook/pythonpath.sh
+source;share/simplebot/hook/ament_prefix_path.ps1
+source;share/simplebot/hook/ament_prefix_path.dsv
+source;share/simplebot/hook/ament_prefix_path.sh
+source;../../build/simplebot/share/simplebot/hook/pythonpath_develop.ps1
+source;../../build/simplebot/share/simplebot/hook/pythonpath_develop.dsv
+source;../../build/simplebot/share/simplebot/hook/pythonpath_develop.sh

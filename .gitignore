@@ -1,0 +1,27 @@
+# ROS2 build artifacts
+ws/build/
+ws/install/
+ws/log/
+ws/.ros/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log

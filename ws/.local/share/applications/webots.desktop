@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Webots
+Comment=Webots mobile robot simulator
+Exec=/root/.ros/webotsR2023b/webots/webots
+Icon=/root/.ros/webotsR2023b/webots/resources/icons/core/webots.png
+Terminal=false
+Type=Application
