@@ -122,3 +122,5 @@ source  install/local_setup.bash
 ros2 launch bot simulate.launch.py
 docker ps
 exit
+ls
+exit

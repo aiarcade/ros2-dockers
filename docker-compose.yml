@@ -1,45 +1,41 @@
 services:
   dev:
     build:
-      context: ./dev
+      context: ./
       dockerfile: Dockerfile
-
     container_name: ros2_dev
-
     environment:
       - ROS_LOCALHOST_ONLY=0
       - ROS_DOMAIN_ID=0
-
     volumes:
-      - ./ws:/root/
+      - ./:/root/
       - ./entrypoint.sh:/entrypoint.sh
-
     entrypoint: ["/entrypoint.sh"]
-
     command: ["tail", "-f", "/dev/null"]
-
     ports:
       - "7400-7700:7400-7700/udp"
       - "9090:9090"
-
     extra_hosts:
       - "host.docker.internal:host-gateway"
-
     network_mode: bridge
 
-
-  
   echo:
     build:
-      context: ./echo
+      context: ./
       dockerfile: Dockerfile
     container_name: ros2_echo
     environment:
+      - ROS_LOCALHOST_ONLY=0
       - ROS_DOMAIN_ID=0
-      - RMW_TRANSPORT_TYPE=udp
-      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-      - WEBOTS_HOME=/root/.ros
-      - USER=root
-    network_mode: host  
-    
+    volumes:
+      - ./:/root/
+      - ./entrypoint.sh:/entrypoint.sh
+    entrypoint: ["/entrypoint.sh"]
+    command: ["tail", "-f", "/dev/null"]
+    ports:
+      - "7500-7800:7500-7800/udp"
+      - "9091:9091"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    network_mode: bridge
 
