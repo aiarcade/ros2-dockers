@@ -2,7 +2,7 @@ services:
   dev:
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.rolling
     container_name: ros2_dev
     environment:
       - ROS_LOCALHOST_ONLY=0
@@ -22,7 +22,7 @@ services:
   echo:
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.rolling
     container_name: ros2_echo
     environment:
       - ROS_LOCALHOST_ONLY=0

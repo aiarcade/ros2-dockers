@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'hello_world'
+package_name = 'py_pubsub'
 
 setup(
     name=package_name,
@@ -10,7 +10,6 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name, ['launch/simulate.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,8 +24,6 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = hello_world.ex1pub:main',
-            'listener = hello_world.ex1sub:main',
         ],
     },
 )
