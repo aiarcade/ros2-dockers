@@ -34,6 +34,207 @@ Floor {
   size 50 50
   tileSize 3 3
 }
+DEF OBSTACLE1 Solid {
+  translation 1.5 0.5 0.15
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.3
+      }
+    }
+  ]
+  name "obstacle1"
+  boundingObject Box {
+    size 0.3 0.3 0.3
+  }
+}
+DEF OBSTACLE2 Solid {
+  translation 2.0 -0.3 0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.8 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.15
+      }
+    }
+  ]
+  name "obstacle2"
+  boundingObject Cylinder {
+    height 0.4
+    radius 0.15
+  }
+}
+DEF OBSTACLE3 Solid {
+  translation 1.2 -0.6 0.15
+  rotation 0 0 1 0.5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.4 0.2 0.3
+      }
+    }
+  ]
+  name "obstacle3"
+  boundingObject Box {
+    size 0.4 0.2 0.3
+  }
+}
+DEF OBSTACLE4 Solid {
+  translation 0.3 0.8 0.12
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.25 0.25 0.25
+      }
+    }
+  ]
+  name "obstacle4"
+  boundingObject Box {
+    size 0.25 0.25 0.25
+  }
+}
+DEF OBSTACLE5 Solid {
+  translation 2.5 0.7 0.18
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.2 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.35
+        radius 0.18
+      }
+    }
+  ]
+  name "obstacle5"
+  boundingObject Cylinder {
+    height 0.35
+    radius 0.18
+  }
+}
+DEF OBSTACLE6 Solid {
+  translation 0.5 -0.5 0.1
+  rotation 0 0 1 0.785
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.8 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.35 0.2
+      }
+    }
+  ]
+  name "obstacle6"
+  boundingObject Box {
+    size 0.2 0.35 0.2
+  }
+}
+DEF OBSTACLE7 Solid {
+  translation 1.8 0.9 0.15
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.9 0.5 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.3
+      }
+    }
+  ]
+  name "obstacle7"
+  boundingObject Box {
+    size 0.3 0.3 0.3
+  }
+}
+DEF OBSTACLE8 Solid {
+  translation 2.8 0.2 0.15
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.9 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.3
+        radius 0.12
+      }
+    }
+  ]
+  name "obstacle8"
+  boundingObject Cylinder {
+    height 0.3
+    radius 0.12
+  }
+}
+DEF OBSTACLE9 Solid {
+  translation 1.0 1.0 0.08
+  rotation 0 0 1 1.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.3 0.7
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 0.4 0.15
+      }
+    }
+  ]
+  name "obstacle9"
+  boundingObject Box {
+    size 0.15 0.4 0.15
+  }
+}
+DEF OBSTACLE10 Solid {
+  translation 2.3 -0.8 0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.6 0.9
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "obstacle10"
+  boundingObject Cylinder {
+    height 0.4
+    radius 0.2
+  }
+}
 DEF HEXAPOD Robot {
   translation 0.7521868339949807 0.14307520360489845 0.05911213292086345
   rotation 0.0007131789438021356 -0.0002211379386325654 -0.9999997212368643 0.680907996217772
@@ -449,6 +650,67 @@ DEF HEXAPOD Robot {
     PointLight {
       attenuation 0 0 0.1
       location -1 -1 3.5
+    }
+    DistanceSensor {
+      translation 0.12 0 0.02
+      rotation 0 0 1 0
+      children [
+        DEF SENSOR_SHAPE Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.01
+          }
+        }
+      ]
+      name "sonar_front"
+      lookupTable [
+        0 0 0
+        0.1 1000 0
+        2 1000 0
+        2.5 0 0
+      ]
+      type "sonar"
+      numberOfRays 5
+      aperture 0.5
+    }
+    DistanceSensor {
+      translation 0.08 0.08 0.02
+      rotation 0 0 1 0.785
+      children [
+        USE SENSOR_SHAPE
+      ]
+      name "sonar_left"
+      lookupTable [
+        0 0 0
+        0.1 1000 0
+        2 1000 0
+        2.5 0 0
+      ]
+      type "sonar"
+      numberOfRays 5
+      aperture 0.5
+    }
+    DistanceSensor {
+      translation 0.08 -0.08 0.02
+      rotation 0 0 1 -0.785
+      children [
+        USE SENSOR_SHAPE
+      ]
+      name "sonar_right"
+      lookupTable [
+        0 0 0
+        0.1 1000 0
+        2 1000 0
+        2.5 0 0
+      ]
+      type "sonar"
+      numberOfRays 5
+      aperture 0.5
     }
   ]
   name "hexapod"
