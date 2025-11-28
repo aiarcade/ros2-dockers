@@ -1,1 +1,1 @@
-prepend-non-duplicate;PYTHONPATH;/root/src/build/hello
+prepend-non-duplicate;PYTHONPATH;/root/ws/src/build/hello

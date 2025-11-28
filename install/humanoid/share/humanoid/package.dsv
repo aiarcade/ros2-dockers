@@ -1,0 +1,9 @@
+source;share/humanoid/hook/pythonpath.ps1
+source;share/humanoid/hook/pythonpath.dsv
+source;share/humanoid/hook/pythonpath.sh
+source;share/humanoid/hook/ament_prefix_path.ps1
+source;share/humanoid/hook/ament_prefix_path.dsv
+source;share/humanoid/hook/ament_prefix_path.sh
+source;../../build/humanoid/share/humanoid/hook/pythonpath_develop.ps1
+source;../../build/humanoid/share/humanoid/hook/pythonpath_develop.dsv
+source;../../build/humanoid/share/humanoid/hook/pythonpath_develop.sh

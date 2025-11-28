@@ -3,7 +3,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.rolling
-    container_name: ros2_dev
+    container_name: ros2_devr
     environment:
       - ROS_LOCALHOST_ONLY=0
       - ROS_DOMAIN_ID=0
@@ -23,7 +23,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.rolling
-    container_name: ros2_echo
+    container_name: ros2_echor
     environment:
       - ROS_LOCALHOST_ONLY=0
       - ROS_DOMAIN_ID=0

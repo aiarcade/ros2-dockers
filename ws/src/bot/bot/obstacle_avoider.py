@@ -46,20 +46,7 @@ class ObstacleAvoider(Node):
             command_message.linear.x = 0.05
             
             # Turn away from the obstacle
-            if left_obstacle and right_obstacle:
-                # Both sensors detect obstacle - turn right sharply
-                command_message.angular.z = -2.0
-            elif left_obstacle:
-                # Obstacle on left - turn right
-                command_message.angular.z = -2.0
-            else:
-                # Obstacle on right - turn left
-                command_message.angular.z = 2.0
-        else:
-            # No obstacles - move forward at full speed
-            command_message.linear.x = 0.1
-            command_message.angular.z = 0.0
-
+           
         self.__publisher.publish(command_message)
 
 

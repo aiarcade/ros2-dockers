@@ -1,0 +1,80 @@
+#VRML_SIM R2025b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/9ccb17445148acddc49edda04404a3ea1065d932/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/9ccb17445148acddc49edda04404a3ea1065d932/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/9ccb17445148acddc49edda04404a3ea1065d932/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/9ccb17445148acddc49edda04404a3ea1065d932/projects/robots/boston_dynamics/atlas/protos/Atlas.proto"
+
+WorldInfo {
+  info [
+    "Atlas sample"
+  ]
+  CFM 1e-07
+  ERP 0.8
+  basicTimeStep 8
+  lineScale 0.25
+}
+Viewpoint {
+  orientation -0.12659710552975714 -0.22835578605467902 0.9653117671751635 5.240580919908894
+  position -2.865683905553612 4.682075686495775 2.3027735372263853
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1000 1000
+}
+Atlas {
+  hidden position_0_0 -1.786446462928509e-08
+  hidden position_0_1 2.040515528923098e-07
+  hidden position_0_2 -2.294478107742749e-07
+  hidden position_2_0 1.6451274055338396e-07
+  hidden rotation_4 0 0.9999999999999999 0 1.632340423778195e-07
+  hidden position_4_0 2.6927770037138494e-07
+  hidden rotation_6 1 0 0 2.698715072315163e-07
+  hidden position_6_0 -1.5623218815202684e-09
+  hidden position_6_1 -4.5087563236081986e-10
+  hidden position_6_2 9.242830062313948e-08
+  hidden position_8_0 -1.373484023941055
+  hidden rotation_10 -1 0 0 1.373484023941055
+  hidden position_10_0 9.051774280828074e-11
+  hidden position_12_0 -1.7742109579404532e-08
+  hidden position_14_0 -2.3412757178242337e-09
+  hidden position_16_0 -7.864667170433055e-09
+  hidden rotation_21 0 0.5000001748438416 -0.8660253028382761 9.424321830774485e-08
+  hidden position_21_0 -0.757580265537171
+  hidden rotation_23 -1 0 0 0.757580265537171
+  hidden position_23_0 5.1429011953474486e-08
+  hidden rotation_25 0 1 0 5.16191365590357e-08
+  hidden position_25_0 -0.3247968705542611
+  hidden rotation_27 -1 0 0 0.3247968705542608
+  hidden position_27_0 -2.1473695037432308e-08
+  hidden rotation_29 0 -1 0 2.9802322387695313e-08
+  hidden position_29_0 -8.816063982715455e-09
+  hidden rotation_33 0 0 1 2.043144285798385e-07
+  hidden position_33_0 -7.5767459914999336e-06
+  hidden rotation_35 -0.9999999999999999 0 0 7.576767922893392e-06
+  hidden position_35_0 8.39251553192219e-07
+  hidden rotation_37 0 1 0 8.392410183148877e-07
+  hidden position_37_0 3.6325998466057853e-07
+  hidden rotation_39 0 1 0 3.63783705703429e-07
+  hidden position_39_0 1.2821098303177734e-07
+  hidden rotation_41 0 1 0 1.2990531157078367e-07
+  hidden position_41_0 -2.2098339398535227e-07
+  hidden rotation_43 -1 0 0 2.210199382035633e-07
+  hidden rotation_45 0 0 -0.9999999999999999 2.289159818848554e-07
+  hidden position_45_0 8.790476774516984e-06
+  hidden rotation_47 1 0 0 8.790472722923096e-06
+  hidden position_47_0 -3.060137556119405e-07
+  hidden rotation_49 0 -1 0 3.053829302179697e-07
+  hidden position_49_0 -1.3594154609155238e-07
+  hidden rotation_51 0 -1 0 1.3657139822709086e-07
+  hidden position_51_0 -1.70716151049006e-07
+  hidden rotation_53 0 -1 0 1.7120130796843858e-07
+  hidden position_53_0 7.308390684553808e-08
+  hidden rotation_55 1 0 0 7.300048299977715e-08
+  translation -0.004185915624670883 -0.01112105703763754 0.9221045136108453
+  rotation 0.010534438207105161 -0.0006427363194932395 0.999944304699859 1.5799493710238508
+  controller "humanoid_controller"
+}

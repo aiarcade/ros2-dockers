@@ -1,1 +1,1 @@
-prepend-non-duplicate;PYTHONPATH;/root/src/build/simplebot
+prepend-non-duplicate;PYTHONPATH;/root/ws/src/build/simplebot

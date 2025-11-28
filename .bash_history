@@ -43,3 +43,43 @@ colcon build --symlink-install
 ros2 launch  hello_world simulate.launch.py
 ros2 pkg create --build-type ament_python py_pubsub
 exit
+cd ws/src
+colcon build --symlink-install
+rm -rf build/ install/
+colcon build --symlink-install
+source  /opt/ros/rolling/setup.bash 
+source  install/local_setup.
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+colcon build --symlink-install
+source  install/local_setup.bash 
+colcon build --symlink-install
+source  install/local_setup.bash 
+ros2 launch  simplebot simulate.launch.py
+exit

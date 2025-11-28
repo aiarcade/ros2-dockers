@@ -27,8 +27,6 @@ setup(
             'talker = simplebot.ex1pub:main',
             'listener = simplebot.ex1sub:main',
             'drive = simplebot.simple_drive:main',
-            'sensor = simplebot.sensor_read:main',
-          
         ],
     },
 )

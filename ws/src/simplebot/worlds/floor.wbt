@@ -1,4 +1,4 @@
-#VRML_SIM R2023b utf8
+#VRML_SIM R2025b utf8
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
@@ -12,7 +12,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.020382787773359133 0.9991592330071086 0.03557202635825916 1.0415250924266573
-  position -1.3722416497725183 -0.12516901733155725 2.293856876479068
+  position -0.8981631983556829 -0.10581398645476614 1.4840553976650943
   bloomThreshold 0.5
 }
 TexturedBackground {
@@ -21,103 +21,13 @@ TexturedBackgroundLight {
 }
 RectangleArena {
 }
-DEF GREEN_BOX Solid {
-  translation 0.25 0.05 0.05
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0 1 0
-        roughness 0.2189099510000001
-        metalness 0
-      }
-      geometry DEF BOX0 Box {
-        size 0.1 0.23 0.1
-      }
-    }
-  ]
-  name "green box"
-  boundingObject Shape {
-    appearance PBRAppearance {
-      metalness 0
-    }
-    geometry USE BOX0
-  }
-}
-DEF BLUE_BOX Solid {
-  translation -0.27 -0.2 0.05
-  rotation 0 0 1 0.31
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 0 0 1
-        roughness 0.519341125
-        metalness 0
-      }
-      geometry DEF BOX1 Box {
-        size 0.1 0.2 0.1
-      }
-    }
-  ]
-  name "blue box"
-  boundingObject Shape {
-    appearance PBRAppearance {
-      metalness 0
-    }
-    geometry USE BOX1
-  }
-}
-DEF YELLOW_BOX Solid {
-  translation -0.15 0.2 0.05
-  rotation 0 0 1 0.4
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 1 1 0
-        roughness 0.03934117200000009
-        metalness 0
-      }
-      geometry DEF BOX2 Box {
-        size 0.3 0.05 0.1
-      }
-    }
-  ]
-  name "yellow box"
-  boundingObject Shape {
-    appearance PBRAppearance {
-      roughness 1.1102230246251565e-16
-      metalness 0
-    }
-    geometry USE BOX2
-  }
-}
-DEF PINK_BOX Solid {
-  translation 0.1 -0.42 0.05
-  rotation 0 0 1 1.8326
-  children [
-    Shape {
-      appearance PBRAppearance {
-        baseColor 1 0.1 0.3
-        roughness 0.16827074099999995
-        metalness 0
-      }
-      geometry DEF BOX3 Box {
-        size 0.08 0.15 0.1
-      }
-    }
-  ]
-  name "red box"
-  boundingObject Shape {
-    appearance PBRAppearance {
-      roughness 1.1102230246251565e-16
-      metalness 0
-    }
-    geometry USE BOX3
-  }
-}
 Robot {
+  translation 0 -3.588059559180158e-10 -0.00021911902082535906
+  rotation -1 0 0 3.300834640862455e-08
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 1.7973645737361435e-07
         axis 0 1 0
         anchor 0 0 0.025
       }
@@ -128,8 +38,9 @@ Robot {
       ]
       endPoint Solid {
         translation 0 0.045 0.025
+        rotation 0 1 0 1.7881393432617193e-07
         children [
-          DEF WHEEL Transform {
+          DEF WHEEL Pose {
             rotation 1 0 0 1.5707996938995747
             children [
               Shape {
@@ -150,10 +61,13 @@ Robot {
         boundingObject USE WHEEL
         physics Physics {
         }
+        linearVelocity 0 -2.2743780311205927e-15 -3.6172149348734533e-16
+        angularVelocity 6.870998299669315e-14 0 0
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 1.7973649848749276e-07
         axis 0 1 0
         anchor 0 0 0.025
       }
@@ -164,6 +78,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0 -0.045 0.025
+        rotation 0 1 0 1.7881393432617193e-07
         children [
           USE WHEEL
         ]
@@ -171,9 +86,11 @@ Robot {
         boundingObject USE WHEEL
         physics Physics {
         }
+        linearVelocity 0 3.7139804399423086e-15 3.619591739621606e-16
+        angularVelocity -1.545995990880745e-13 0 0
       }
     }
-    Transform {
+    Pose {
       translation 0 0 0.0415
       children [
         Shape {
@@ -189,53 +106,8 @@ Robot {
         }
       ]
     }
-    DistanceSensor {
-      translation 0.042 0.02 0.063
-      rotation 0 0 1 0.5236003061004253
-      children [
-        DEF SENSOR Transform {
-          rotation 0 1 0 1.5708
-          children [
-            Shape {
-              appearance PBRAppearance {
-                baseColor 1 1 0
-                roughness 1
-                metalness 0
-              }
-              geometry Cylinder {
-                height 0.004
-                radius 0.008
-              }
-            }
-          ]
-        }
-      ]
-      name "ds0"
-      lookupTable [
-        0 1020 0
-        0.05 1020 0
-        0.15 0 0
-      ]
-      numberOfRays 2
-      aperture 1
-    }
-    DistanceSensor {
-      translation 0.042 -0.02 0.063
-      rotation 0 0 1 -0.5235996938995747
-      children [
-        USE SENSOR
-      ]
-      name "ds1"
-      lookupTable [
-        0 1020 0
-        0.05 1020 0
-        0.15 0 0
-      ]
-      numberOfRays 2
-      aperture 1
-    }
   ]
-  boundingObject Transform {
+  boundingObject Pose {
     translation 0 0 0.0415
     children [
       USE BODY
@@ -243,6 +115,7 @@ Robot {
   }
   physics Physics {
   }
-  controller "<extern>"
-  name "robot"
+  controller "simplebot_controller"
+  linearVelocity 0 2.337102616135187e-15 -6.2546545834651535e-15
+  angularVelocity -9.820461274317679e-14 0 0
 }
