@@ -27,6 +27,7 @@ setup(
             'talker = hexapod.ex1pub:main',
             'listener = hexapod.ex1sub:main',
             'drive = hexapod.simple_drive:main',
+            'rollover_drive = hexapod.rollover_drive:main',
         ],
     },
 )
